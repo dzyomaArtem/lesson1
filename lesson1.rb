@@ -6,10 +6,9 @@ class Lesson1
 
   def age(birthday)
 	timeNow = Time.now
-	#birthday = Time.mktime(1995, 7, 23)
+	birthday = Time.mktime(1996, 7, 23)
 	secondValue = timeNow - birthday
 	second = secondValue.to_i
-	#years = timeNow.year - birthday.year
 	p "Я живу #{second/(3600*365*24)} лет или #{second/(3600*24)} дней или #{second/3600} часов или #{second/60} минут или #{second} секунд"
   end
 
@@ -24,10 +23,12 @@ class Lesson1
   end
 end
 
-l1 = Lesson1.new
+
+
+#l1 = Lesson1.new
 #numbers = gets.chomp
 #l1.sum(numbers)
 #--------------
-dateOfBirthday = Time.mktime(1995, 11, 4)
-l1.age(dateOfBirthday)
+#dateOfBirthday = Time.mktime(1995, 11, 4)
+#l1.age
 #l1.name

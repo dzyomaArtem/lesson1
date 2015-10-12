@@ -1,9 +1,8 @@
 class MyArray
   attr_accessor :array
 
-  def initialize(arr = [5, 7, 3, 8, 1, 8, 10])
+  def initialize(arr = [])
     @array = arr
-    p "Начальный массив: #{array.join(", ")}"
   end
 
   def size
