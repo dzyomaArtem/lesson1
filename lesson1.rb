@@ -5,11 +5,14 @@ class Lesson1
   end
 
   def age(birthday)
-	timeNow = Time.now
-	birthday = Time.mktime(1996, 7, 23)
-	secondValue = timeNow - birthday
-	second = secondValue.to_i
-	p "Я живу #{second/(3600*365*24)} лет или #{second/(3600*24)} дней или #{second/3600} часов или #{second/60} минут или #{second} секунд"
+	if birthday 
+	  days = (Date.parse(Time.now.to_s) - Date.parse(birthday)).to_i 
+	  years = days / 365 
+	  hours = days * 24 
+	  min = hours * 60 
+	  sec = min * 60 
+	  p "Я живу #{years} лет или #{days} дней или #{hours} часов или #{min} минут или #{sec} секунд"
+	else 'Неправильный формат даты'
   end
 
   def name
@@ -19,16 +22,6 @@ class Lesson1
     name = gets.chomp
     p "Введите отчество:"
     middlename = gets.chomp 
-    p "Hello #{surname.capitalize.to_s + " " + name.capitalize.to_s + " " + middlename.capitalize.to_s}!"
+    p "Hello #{name.capitalize.to_s + " " + surname.capitalize.to_s + " " + middlename.capitalize.to_s}!"
   end
 end
-
-
-
-#l1 = Lesson1.new
-#numbers = gets.chomp
-#l1.sum(numbers)
-#--------------
-#dateOfBirthday = Time.mktime(1995, 11, 4)
-#l1.age
-#l1.name
