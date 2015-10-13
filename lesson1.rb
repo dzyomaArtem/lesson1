@@ -1,7 +1,9 @@
 require 'date'
 class Lesson1
   def sum(val = 0)
-    val.to_s.split('').inject(0) { |a, e| a + e }.to_s
+    sum = 0
+    val.to_s.split('').each { |num| sum += num.to_i }
+    sum
   end
 
   def age(birthday)
@@ -13,13 +15,13 @@ class Lesson1
       sec = min * 60
       "Я живу #{years} лет или #{days} дней или #{hours} часов
          или #{min} минут или #{sec} секунд"
-    else 'Неправильный формат даты'
+    else 'Invalid Date Format'
     end
   end
 
   def name
-    surname = gets.chomp
     name = gets.chomp
+    surname = gets.chomp
     middlename = gets.chomp
     "Hello #{name} #{surname} #{middlename}!"
   end

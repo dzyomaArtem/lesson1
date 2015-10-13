@@ -51,10 +51,10 @@ class MyArray
   end
 
   def switch
-    @newArr = @array.dup
     min = @array.index(@array.min)
     max = @array.index(@array.max)
-    @newArr[min], @newArr[max] = @array.max, @array.min
+    @array[min], @array[max] = @array[max], @array[min]
+    @array
   end
 
   def before_min
