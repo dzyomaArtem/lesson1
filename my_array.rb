@@ -46,7 +46,7 @@ class MyArray
   end
 
   def chars
-    alphabet = ('a'..'z').to_a.map(&:to_sym)
+    alphabet = (:a..:z).to_a
     @array.map { |val| alphabet[val - 1] }
   end
 
