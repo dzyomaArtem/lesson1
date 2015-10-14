@@ -6,7 +6,7 @@ class MyArray
   end
 
   def size
-    @array.length
+    @array.size
   end
 
   def reverse
@@ -30,7 +30,7 @@ class MyArray
   end
 
   def odd
-    @array.select { |number| number % 2 > 0 }
+    @array.select(&:odd?)
   end
 
   def multiple_to_three
